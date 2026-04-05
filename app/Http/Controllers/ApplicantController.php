@@ -23,7 +23,7 @@ class ApplicantController extends Controller
                                         ->exists();
 
         if ($existingApplication) {
-            return redirect()->back()->with('status', 'You have already applied to this job.');
+            return redirect()->back()->with('fail', 'You have already applied to this job.');
         }
 
         // Validate incoming data
